@@ -6,12 +6,11 @@ import { useNavigation } from '@react-navigation/native'
 
 import dataDetails from '../data/dataDetails.json'
 import transStyles from './styles'
-import summStyles from './styles'
 
 const Stack = createNativeStackNavigator()
 
-const Transaction =() => {
-    
+const Transaction = () => {
+
     return (
         <Stack.Navigator screenOptions={{
             headerStyle: { backgroundColor: '#2196F3' },
@@ -26,8 +25,7 @@ const Transaction =() => {
 
 
 function TransLists() {
-    // return <TransactLists />
-
+    
     const navigation = useNavigation()
 
     // Extracting unique store names
@@ -41,7 +39,6 @@ function TransLists() {
     // Function to navigate to TransactDetails
     const handlePress = (storeName) => {
         navigation.navigate('Transactions Details', { storeName: storeName })
-        // navigation.navigate(TransDetails( storeName ) )
     }
 
     // Render item for FlatList
@@ -65,32 +62,39 @@ function TransLists() {
 }
 
 function TransDetails({ route }) {
-    const { storeName } = route.params;
+    const { storeName } = route.params
 
     // Find the transaction details for the provided storeName
-    const transactionDetails = dataDetails.transaction;
+    const transactionDetails = dataDetails.transaction
     const selectedTransaction = Object.values(transactionDetails).find(
         transaction => transaction.storeName === storeName
-    );
+    )
 
     // If the transaction is found, display the details
     if (selectedTransaction) {
-        const { productName, productPrice, storeAddress, transactDate } = selectedTransaction;
+        const { productName, productPrice, storeAddress, transactDate } = selectedTransaction
         return (
-            <View style={summStyles.container}>
-                {/* <Text>Product Name: {productName}</Text> */}
-                <Text style={summStyles.container}> {productPrice}</Text>
-                {/* <Text>Store Address: {storeAddress}</Text> */}
-                {/* <Text>Transaction Date: {transactDate}</Text> */}
-            </View>
-        );
+            <>
+                <View style={transStyles.container1}>
+                    {/* <Text>Product Name: {productName}</Text> */}
+                    <Text style={transStyles.prodPrice}> {productPrice}</Text>
+                    <Text style={transStyles.textDetails}>{storeName}</Text>
+                    <Text style={transStyles.textDetails}>{storeAddress}</Text>
+
+                </View>
+                <View style={transStyles.container2}>
+                    <Text style={{ fontSize : 20 }}>Transaction Date</Text>
+                    <Text style={transStyles.transacDate}>{transactDate}</Text>
+                </View>
+            </>
+        )
     } else {
         // If transaction details are not found for the provided storeName
         return (
-            <View style={summStyles.prodPrice}>
+            <View style={transStyles.prodPrice}>
                 <Text>No transaction details found for {storeName}</Text>
             </View>
-        );
+        )
     }
 }
 

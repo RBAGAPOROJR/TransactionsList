@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "ReactNav",
-    "slug": "ReactNav",
+    "name": "FinanceTransaction",
+    "slug": "FinanceTransaction",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/finance-mode-rounded.svg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
