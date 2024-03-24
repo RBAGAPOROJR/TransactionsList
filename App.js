@@ -1,36 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import SignInScreen from "./SignInScreen";
-import SignUpScreen from "./SignUpScreen";
-import HomeScreen from './HomeScreen';
 
-import TransactLists from './screens/TransactLists';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
-const Stack = createNativeStackNavigator();
+import Transaction from './tabScreen/Transaction'
+import Summary from './tabScreen/Summary'
+
+const Tab = createBottomTabNavigator()
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
-        headerStyle: {backgroundColor: '#2196F3'},
-        headerTintColor: '#FFF',
-        headerTitleStyle: {fontWeight: 'bold'},
-      }}>
-        <Stack.Screen name="Transaction List" component={TransactLists} />
-      </Stack.Navigator>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarActiveTintColor: "#2196F3",
+          tabBarInactiveTintColor: "gray",
+          tabBarStyle: {
+            display: "flex"
+          },
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName
+            if (route.name === 'Transactions') {
+              iconName = focused ? 'file' : 'file-o'
+            } else if (route.name === 'Summary') {
+              iconName = focused ? 'heart' : 'heart-o'
+            }
+            return <Icon name={iconName} size={size} color={color} />
+          },
+        })}
+      >
+        <Tab.Screen name='Transactions' component={Transaction} />
+        <Tab.Screen name='Summary' component={Summary} />
+      </Tab.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-export default App;
+export default App
