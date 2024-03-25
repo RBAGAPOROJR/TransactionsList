@@ -22,9 +22,11 @@ const transStyles = StyleSheet.create({
         padding: 10
     },
     item: {
+        flexDirection : 'row',
+        justifyContent:'space-between',    
         padding: 10,
         fontSize: 18,
-        height: 44,
+        height: 50,
     },
 
     // TRANSACTION DETAILS STYLE * * * * * * * * * * * * * * * * * *

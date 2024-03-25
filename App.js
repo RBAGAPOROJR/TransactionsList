@@ -21,20 +21,34 @@ const App = () => {
           },
           tabBarIcon: ({ focused, color, size }) => {
             let iconName
-            if (route.name === 'Transactions') {
+            if (route.name === 'Transaction') {
               iconName = focused ? 'file' : 'file-o'
             } else if (route.name === 'Summary') {
-              iconName = focused ? 'heart' : 'heart-o'
+              iconName = focused ? 'info-circle' : 'info'
             }
             return <Icon name={iconName} size={size} color={color} />
           },
+          
         })}
       >
-        <Tab.Screen name='Transactions' component={Transaction} />
-        <Tab.Screen name='Summary' component={Summary} />
+        <Tab.Screen name='Transaction' component={Transaction}  options={{ headerShown: false }} />
+        <Tab.Screen name='Summary' component={Summary} 
+          options={{
+            headerStyle: { backgroundColor: "#2196F3", },
+            headerTitleStyle : { color: '#FFF', fontSize: 24  },
+          }}/>
       </Tab.Navigator>
     </NavigationContainer>
   )
 }
 
 export default App
+
+// ,
+// "011": {
+//     "productName": "2 Spciy Chicken",
+//     "productPrice": "$12.99",
+//     "storeName": "Jollibee",
+//     "storeAddress": "777 Fast Food Drive, Niagara Falls, ON",
+//     "transactDate": "March 19, 2024"
+// }
