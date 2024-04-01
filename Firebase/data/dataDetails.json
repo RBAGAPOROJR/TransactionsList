@@ -1,0 +1,75 @@
+{
+    "transaction": {
+        "001": {
+            "productName": "GUCCI Handbag",
+            "productPrice": "$800.00",
+            "storeName": "Luxury Boutique",
+            "storeAddress": "123 Luxury Street, Toronto, ON",
+            "transactDate": "March 10, 2024"
+        },
+        "002": {
+            "productName": "Starbucks Coffee",
+            "productPrice": "$5.50",
+            "storeName": "Starbucks",
+            "storeAddress": "456 Coffee Avenue, Ottawa, ON",
+            "transactDate": "March 11, 2024"
+        },
+        "003": {
+            "productName": "iPhone 13 Pro",
+            "productPrice": "$1,299.00",
+            "storeName": "Apple Store",
+            "storeAddress": "789 Technology Drive, Mississauga, ON",
+            "transactDate": "March 12, 2024"
+        },
+        "004": {
+            "productName": "Tesla Model S",
+            "productPrice": "$89,990.00",
+            "storeName": "Tesla Showroom",
+            "storeAddress": "101 Electric Avenue, Markham, ON",
+            "transactDate": "March 13, 2024"
+        },
+        "005": {
+            "productName": "Rolex Watch",
+            "productPrice": "$10,000.00",
+            "storeName": "Timepiece Emporium",
+            "storeAddress": "222 Watch Boulevard, Hamilton, ON",
+            "transactDate": "March 14, 2024"
+        },
+        "006": {
+            "productName": "Bose Noise Cancelling Headphones",
+            "productPrice": "$349.99",
+            "storeName": "Electronics Emporium",
+            "storeAddress": "333 Gadget Street, Brampton, ON",
+            "transactDate": "March 15, 2024"
+        },
+        "007": {
+            "productName": "Nike Air Max Sneakers",
+            "productPrice": "$120.00",
+            "storeName": "Athletic Gear Store",
+            "storeAddress": "444 Sports Avenue, London, ON",
+            "transactDate": "March 16, 2024"
+        },
+        "008": {
+            "productName": "Dell XPS Laptop",
+            "productPrice": "$1,499.99",
+            "storeName": "Tech Superstore",
+            "storeAddress": "555 Innovation Street, Windsor, ON",
+            "transactDate": "March 17, 2024"
+        },
+        "009": {
+            "productName": "Samsung Galaxy Watch",
+            "productPrice": "$299.99",
+            "storeName": "Samsung Experience Store",
+            "storeAddress": "666 Tech Avenue, Kingston, ON",
+            "transactDate": "March 18, 2024"
+        },
+        "010": {
+            "productName": "Big Mac Combo",
+            "productPrice": "$7.99",
+            "storeName": "McDonald's",
+            "storeAddress": "777 Fast Food Drive, Niagara Falls, ON",
+            "transactDate": "March 19, 2024"
+        }
+    }
+}
+
