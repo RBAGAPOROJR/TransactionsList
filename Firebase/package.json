@@ -17,6 +17,8 @@
     "@rneui/themed": "^4.0.0-rc.8",
     "expo": "~50.0.14",
     "expo-status-bar": "~1.11.1",
+    "firebase": "^10.10.0",
+    "firestore": "^1.1.6",
     "react": "18.2.0",
     "react-native": "^0.73.6",
     "react-native-gesture-handler": "~2.14.0",

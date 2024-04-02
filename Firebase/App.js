@@ -3,7 +3,6 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/FontAwesome'
-
 import Transaction from './tabScreen/Transaction'
 import Summary from './tabScreen/Summary'
 
@@ -43,12 +42,3 @@ const App = () => {
 }
 
 export default App
-
-// ,
-// "011": {
-//     "productName": "2 Spciy Chicken",
-//     "productPrice": "$12.99",
-//     "storeName": "Jollibee",
-//     "storeAddress": "777 Fast Food Drive, Niagara Falls, ON",
-//     "transactDate": "March 19, 2024"
-// }

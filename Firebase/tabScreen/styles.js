@@ -71,5 +71,4 @@ const transStyles = StyleSheet.create({
 
 })
 
-
-export default transStyles
+export default transStyles 
